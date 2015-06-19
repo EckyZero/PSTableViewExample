@@ -8,11 +8,11 @@ namespace PSTableViewExample.iOS
 	{
 		public Action<CountryItemViewModel> RequestNextPage;
 
-		public ObservableCollection<CountryItemViewModel> ViewModels;
+		public ObservableCollection<CountryItemViewModel> Items;
 
 		public CountriesViewModel ()
 		{
-			ViewModels = new ObservableCollection<CountryItemViewModel> ();
+			Items = new ObservableCollection<CountryItemViewModel> ();
 
 			var apple = new Fruit ("Apple", "The apple tree is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple.");
 			var orange = new Fruit ("Orange", "The orange is the fruit of the citrus species Citrus × sinensis in the family Rutaceae.");
@@ -31,7 +31,7 @@ namespace PSTableViewExample.iOS
 			foreach (Country country in countries) {
 				var viewModel = new CountryItemViewModel (country);
 				viewModel.OnSelected = OnSelected;
-				ViewModels.Add (viewModel);
+				Items.Add (viewModel);
 			}
 		}
 
