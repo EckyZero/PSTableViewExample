@@ -39,6 +39,7 @@
     <Compile Include="CountryItemViewModel.cs" />
     <Compile Include="CountriesViewModel.cs" />
     <Compile Include="FruitViewModel.cs" />
+    <Compile Include="HeaderViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
 </Project>

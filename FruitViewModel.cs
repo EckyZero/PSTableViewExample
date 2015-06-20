@@ -6,11 +6,11 @@ namespace PSTableViewExample
 {
 	public class FruitViewModel
 	{
-		public ObservableCollection<FruitItemViewModel> Items;
+		public ObservableCollection<IListItemViewModel> Items;
 
 		public FruitViewModel (CountryItemViewModel countryViewModel)
 		{
-			Items = new ObservableCollection<FruitItemViewModel> ();
+			Items = new ObservableCollection<IListItemViewModel> ();
 
 			foreach (Fruit fruit in countryViewModel.Country.Fruits) {
 				var viewModel = new FruitItemViewModel(fruit);

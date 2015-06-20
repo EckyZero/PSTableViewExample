@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--First Controller-->
+        <!--Countries-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController restorationIdentifier="CountriesController" storyboardIdentifier="CountriesController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="CountriesController" sceneMemberID="viewController">
@@ -28,14 +28,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="93.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="14" misplaced="YES">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="14">
                                                     <rect key="frame" x="20" y="15" width="560" height="20.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ol4-SF-aIm" misplaced="YES">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ol4-SF-aIm">
                                                     <rect key="frame" x="20" y="43" width="560" height="20.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -64,6 +64,43 @@
                                             <outlet property="NameLabel" destination="14" id="xLF-cg-o4Z"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeaderCell" rowHeight="40" id="udr-FN-QCk" customClass="HeaderCell">
+                                        <rect key="frame" x="0.0" y="22" width="600" height="94"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="udr-FN-QCk" id="NXP-qO-wdM">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="93.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Header Text" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ymA-iW-bMM">
+                                                    <rect key="frame" x="20" y="4" width="560" height="31.5"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.71764705880000002" green="0.71764705880000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="ymA-iW-bMM" secondAttribute="bottom" constant="4" id="I4Z-35-ohK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ymA-iW-bMM" secondAttribute="trailing" constant="12" id="Qzp-MJ-IQ3"/>
+                                                <constraint firstItem="ymA-iW-bMM" firstAttribute="top" secondItem="NXP-qO-wdM" secondAttribute="topMargin" constant="7" id="So8-oU-Vtr"/>
+                                                <constraint firstItem="ymA-iW-bMM" firstAttribute="top" secondItem="NXP-qO-wdM" secondAttribute="top" constant="4" id="StQ-08-a7r"/>
+                                                <constraint firstItem="ymA-iW-bMM" firstAttribute="leading" secondItem="NXP-qO-wdM" secondAttribute="leading" constant="20" id="cTC-eM-nTk"/>
+                                                <constraint firstAttribute="trailing" secondItem="ymA-iW-bMM" secondAttribute="trailing" constant="20" id="dCe-nS-bwy"/>
+                                                <constraint firstItem="ymA-iW-bMM" firstAttribute="leading" secondItem="NXP-qO-wdM" secondAttribute="leadingMargin" constant="12" id="w6k-GY-NOO"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Qzp-MJ-IQ3"/>
+                                                    <exclude reference="So8-oU-Vtr"/>
+                                                    <exclude reference="w6k-GY-NOO"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="TitleLabel" destination="ymA-iW-bMM" id="5u5-eY-ICW"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -75,7 +112,7 @@
                             <constraint firstItem="3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sCw-v9-zhn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w7B-4T-Pcg"/>
+                    <navigationItem key="navigationItem" title="Countries" id="w7B-4T-Pcg"/>
                     <connections>
                         <outlet property="TableView" destination="3" id="tgy-wm-GYz"/>
                     </connections>
@@ -84,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="812" y="0.0"/>
         </scene>
-        <!--Second Controller-->
+        <!--Fruit-->
         <scene sceneID="20">
             <objects>
-                <viewController restorationIdentifier="FruitController" storyboardIdentifier="FruitController" automaticallyAdjustsScrollViewInsets="NO" id="21" customClass="FruitController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="FruitController" storyboardIdentifier="FruitController" title="Fruit" automaticallyAdjustsScrollViewInsets="NO" id="21" customClass="FruitController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="18"/>
                         <viewControllerLayoutGuide type="bottom" id="19"/>
@@ -107,7 +144,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="78.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="32" misplaced="YES">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name" lineBreakMode="wordWrap" numberOfLines="0" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="32">
                                                     <rect key="frame" x="20" y="14" width="560" height="20.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -171,6 +208,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Htk-hk-zMS">
                         <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.20784313730000001" green="0.40784313729999999" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

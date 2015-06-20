@@ -41,6 +41,9 @@ namespace PSTableViewExample.iOS
 					case CellType.Fruit:
 						identifier = FruitCell.Key;
 						break;
+					case CellType.Header:
+						identifier = HeaderCell.Key;
+						break;
 				}
 			}
 			return identifier;

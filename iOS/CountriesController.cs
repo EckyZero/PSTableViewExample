@@ -18,7 +18,7 @@ namespace PSTableViewExample.iOS
 		{
 			base.ViewDidLoad ();
 
-			TableView.Source = new PSTableViewSource (ViewModel.Items.Cast<IListItemViewModel>());
+			TableView.Source = new PSTableViewSource (ViewModel.Items);
 
 			ViewModel.RequestNextPage = OnRequestNextPage;
 		}

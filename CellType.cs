@@ -5,7 +5,8 @@ namespace PSTableViewExample
 	public enum CellType
 	{
 		Country,
-		Fruit
+		Fruit,
+		Header
 	}
 }
 

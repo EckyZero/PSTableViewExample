@@ -33,6 +33,11 @@ namespace PSTableViewExample.iOS
 			return _estimatedHeight;
 		}
 
+		public override nfloat GetHeightForRow (UITableView tableView, NSIndexPath indexPath)
+		{
+			return UITableView.AutomaticDimension;
+		}
+
 		public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
 		{
 			var viewModel = _viewModels.ElementAt (indexPath.Row);
