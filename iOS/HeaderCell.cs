@@ -14,16 +14,12 @@ namespace PSTableViewExample.iOS
 		public HeaderCell (IntPtr handle) : base (handle)
 		{
 		}
-
-		public override void Configure (IListItemViewModel baseViewModel)
+			
+		public override void ConfigureSubviews (IListItemViewModel baseViewModel)
 		{
-			base.Configure (baseViewModel);
-
 			var viewModel = baseViewModel as HeaderViewModel;
 
 			TitleLabel.Text = viewModel.Text;
-
-			ContentView.LayoutIfNeeded ();
 		}
 	}
 }

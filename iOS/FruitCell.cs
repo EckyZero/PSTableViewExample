@@ -13,16 +13,12 @@ namespace PSTableViewExample.iOS
 		{
 		}
 
-		public override void Configure (IListItemViewModel baseViewModel)
+		public override void ConfigureSubviews (IListItemViewModel baseViewModel)
 		{
-			base.Configure (baseViewModel);
-
 			var viewModel = baseViewModel as FruitItemViewModel;
 
 			NameLabel.Text = viewModel.Title;
 			DescriptionLabel.Text = viewModel.Subtitle;
-
-			ContentView.LayoutIfNeeded ();
 		}
 	}
 }

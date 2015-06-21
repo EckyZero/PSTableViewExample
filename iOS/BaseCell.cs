@@ -9,23 +9,13 @@ namespace PSTableViewExample.iOS
 		{
 		}
 
-		public virtual nfloat CalculateHeight (IListItemViewModel viewModel)
-		{
-			var device = UIDevice.CurrentDevice;
-			var osVersion =  nint.Parse(device.SystemVersion.Substring(0,1)); 
-			var height = UITableView.AutomaticDimension;
+		public abstract void ConfigureSubviews (IListItemViewModel viewModel);
 
-			if(osVersion < 8)
-			{
-				Configure (viewModel);
-				height = ContentView.SystemLayoutSizeFittingSize (UILayoutFittingCompressedSize).Height;
-			}
-			return height;
-		}
-
-		public virtual void Configure (IListItemViewModel baseViewModel)
+		public void Configure (IListItemViewModel viewModel)
 		{
-			
+			ConfigureSubviews (viewModel);
+
+			ContentView.LayoutIfNeeded ();
 		}
 
 		public static string GetIdentifier (IListItemViewModel viewModel)

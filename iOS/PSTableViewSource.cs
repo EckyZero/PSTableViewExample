@@ -22,7 +22,7 @@ namespace PSTableViewExample.iOS
 		{
 			return 1;
 		}
-
+			
 		public override nint RowsInSection (UITableView tableview, nint section)
 		{
 			return _viewModels.Count();
